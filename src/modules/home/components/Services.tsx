@@ -23,7 +23,7 @@ export function Services() {
           spaceBetween={16}
           modules={[Pagination, Autoplay]}
           autoplay={{
-            delay: 5000,
+            delay: 2000,
             pauseOnMouseEnter: true,
           }}
           breakpoints={{
