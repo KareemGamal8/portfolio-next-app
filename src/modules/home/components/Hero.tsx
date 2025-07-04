@@ -20,7 +20,7 @@ export function Hero() {
             animateBy="words"
             delay={200}
             direction="top"
-            className="relative xl:text-[5rem] bg-gradient-to-r from-cyan-700 to-blue-700/50 bg-clip-text text-transparent w-fit overflow-hidden max-sm:text-[2.6rem] max-lg:text-7xl max-xl:text-6xl"
+            className="relative xl:text-[6.5rem] bg-gradient-to-r from-cyan-700 to-blue-700/50 bg-clip-text text-transparent w-fit overflow-hidden max-sm:text-[2.6rem] max-lg:text-7xl max-xl:text-6xl"
           />
           <BlurText
             text="Front-end Developer"
