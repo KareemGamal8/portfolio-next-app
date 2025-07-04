@@ -1,9 +1,6 @@
-import type { Metadata } from "next";
+import NeonCursor from "@/design-system/components/NeonCursor";
+import { Header } from "@/design-system/layouts/components";
 import "./globals.css";
-
-export const metadata: Metadata = {
-  title: "Home",
-};
 
 export default function RootLayout({
   children,
@@ -12,7 +9,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <NeonCursor />
+        <Header />
+        <main>{children}</main>
+      </body>
     </html>
   );
 }

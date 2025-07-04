@@ -1,21 +1,100 @@
 @import "tailwindcss";
 @import "tailwindcss-animated";
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap");
 
 :root {
-  --background: #212529;
+  --primary: #202231;
+  --secondary: #363b7057;
+  --oslo-grey: #858792;
+  --alex: "Alexandria", sans-serif;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-oslo-grey: var(--oslo-grey);
+  --font-alex: var(--alex);
+  --font-monter: var(--cormorant);
 }
 
 body {
-  background: var(--background);
-  font-family: "Montserrat", sans-serif;
+  background: var(--primary);
 }
 
 .container {
-  @apply mx-auto;
+  @apply mx-auto w-[85%] md:max-w-[95%];
+}
+
+.nav-link::after {
+  position: absolute;
+  content: "";
+  -webkit-transform: translate(-50%, -50%) scale(0.9);
+  transform: translate(-50%, -50%) scale(0.9);
+  left: 0;
+  top: 50%;
+  left: 2rem;
+  width: 120px;
+  height: 60px;
+  background-image: url(../shared/assets/menu-hover-shape.webp);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.hero-name::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 25%;
+  width: 100%;
+  height: 3rem;
+  background-image: url(../shared/assets/menu-hover-shape.webp);
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.nav-link:hover::after,
+.active-nav-link::after {
+  visibility: visible;
+  opacity: 1;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+/* Add these to your global CSS */
+@keyframes flicker {
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff,
+      0 0 40px currentColor, 0 0 80px currentColor, 0 0 90px currentColor,
+      0 0 100px currentColor, 0 0 150px currentColor;
+  }
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}
+
+.text-shadow {
+  text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px currentColor,
+    0 0 80px currentColor, 0 0 90px currentColor, 0 0 100px currentColor,
+    0 0 150px currentColor;
+}
+
+.animate-flicker {
+  animation: flicker 1.5s infinite alternate;
 }
