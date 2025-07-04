@@ -11,7 +11,7 @@ import { SectionTitle } from "./SectionTitle";
 export function Services() {
   return (
     <div className="container">
-      <div className="flex flex-col gap-12">
+      <div className="flex flex-col gap-12 py-12">
         <SectionTitle title="How I Can Help" />
         <Swiper
           navigation={true}
