@@ -1,12 +1,11 @@
 import { DecryptedText } from "@/design-system/components";
+import { SectionTitle } from "./SectionTitle";
 
 export function AboutMe() {
   return (
-    <div className="container py-12">
+    <div className="container">
       <div className="flex flex-col gap-6">
-        <h3 className="text-white text-center uppercase font-extrabold text-2xl">
-          {"<>"} Get to know me {"</>"}
-        </h3>
+        <SectionTitle title="Get to know me" />
         <div className="flex flex-col gap-4 text-white font-medium">
           <DecryptedText
             text="Hey, I am Kareem! I am a highly skilled and motivated Front-End

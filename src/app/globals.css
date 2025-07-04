@@ -5,6 +5,7 @@
 
 :root {
   --primary: #0e131b;
+  --secondary: #161d27b2;
   --oslo-grey: #858792;
   --alex: "Alexandria", sans-serif;
 }
@@ -99,18 +100,31 @@ button {
 }
 
 ::-webkit-scrollbar {
-  width: 0.5rem;
+  width: 0.65rem;
   overflow: hidden;
 }
 
 /* Style for the scrollbar track */
 ::-webkit-scrollbar-track {
-  background-color: #0f0714;
   overflow: hidden;
 }
 
 /* Style for the scrollbar thumb */
 ::-webkit-scrollbar-thumb {
-  background-color: #104d63;
+  background-color: #0c3847;
   overflow: hidden;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-pagination-bullet {
+  background-color: #166985 !important;
+  bottom: 50;
+}
+
+.skills-swiper .swiper-wrapper {
+  transition-timing-function: linear;
 }
