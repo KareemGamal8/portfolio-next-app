@@ -18,8 +18,8 @@ export function Services() {
           pagination={{
             dynamicBullets: true,
           }}
-          speed={500}
-          effect={"fade"}
+          speed={1000}
+          effect="fade"
           spaceBetween={16}
           modules={[Pagination, Autoplay]}
           autoplay={{
