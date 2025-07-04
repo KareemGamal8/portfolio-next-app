@@ -20,7 +20,7 @@ export function Hero() {
             animateBy="words"
             delay={200}
             direction="top"
-            className="relative xl:text-[5rem] bg-gradient-to-r from-cyan-700/40 to-blue-700/50 bg-clip-text text-transparent w-fit overflow-hidden max-sm:text-[2.6rem] max-lg:text-7xl max-xl:text-6xl"
+            className="relative xl:text-[5rem] bg-gradient-to-r from-cyan-700 to-blue-700/50 bg-clip-text text-transparent w-fit overflow-hidden max-sm:text-[2.6rem] max-lg:text-7xl max-xl:text-6xl"
           />
           <BlurText
             text="Front-end Developer"
@@ -32,7 +32,12 @@ export function Hero() {
         </div>
         <div className="flex items-center justify-center lg:col-span-5">
           <div className="border-4 w-fit p-12 relative rounded-full border-cyan-600/20 animate-fade justify-center max-lg:items-center animate-once animate-duration-3000">
-            <Image src={user} alt="Kareem" className="w-[22rem]" />
+            <Image
+              loading="lazy"
+              src={user}
+              alt="Kareem"
+              className="w-[22rem]"
+            />
             <SocialLinkIcons />
           </div>
         </div>

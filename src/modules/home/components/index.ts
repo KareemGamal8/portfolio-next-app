@@ -1,3 +1,4 @@
+export * from "./AboutMe";
 export * from "./FacebookLink";
 export * from "./Features";
 export * from "./GmailLink";

@@ -12,8 +12,8 @@ export function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="container py-8">
-      <div className="flex justify-between items-center gap-8 animate-flip-down animate-duration-[1000ms] animate-delay-200 animate-ease-linear">
+    <header className="py-8 bg-background z-50 sticky top-0 animate-flip-down animate-duration-[1000ms] animate-delay-200 animate-ease-linear">
+      <div className="flex container justify-between items-center gap-8 ">
         <h3 className="text-white uppercase font-extrabold text-3xl">
           Kareem.g
         </h3>

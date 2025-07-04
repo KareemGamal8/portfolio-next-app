@@ -5,7 +5,7 @@
 
 :root {
   --primary: #202231;
-  --secondary: #363b7057;
+  --secondary: #363b702f;
   --oslo-grey: #858792;
   --alex: "Alexandria", sans-serif;
 }
@@ -97,4 +97,21 @@ button {
 
 .animate-flicker {
   animation: flicker 1.5s infinite alternate;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+  overflow: hidden;
+}
+
+/* Style for the scrollbar track */
+::-webkit-scrollbar-track {
+  background-color: #0f0714;
+  overflow: hidden;
+}
+
+/* Style for the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #104d63;
+  overflow: hidden;
 }

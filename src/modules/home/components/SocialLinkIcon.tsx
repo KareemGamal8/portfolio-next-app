@@ -14,7 +14,7 @@ export function SocialLinkIcon({ Icon, className, href }: SocialLinkIconType) {
       target="_blank"
       href={href}
       className={twMerge(
-        "h-16 flex justify-center border-cyan-600/20 bg-background items-center duration-500 transition-colors w-16 hover:border-white border-2 rounded-full",
+        "h-16 flex justify-center border-cyan-600 bg-background items-center duration-500 transition-colors w-16 hover:border-white border-2 rounded-full",
         className
       )}
     >

@@ -5,7 +5,7 @@ export const featuresData = [
   },
   {
     count: 15,
-    text: "Project",
+    text: "Projects",
   },
   {
     count: 10,
