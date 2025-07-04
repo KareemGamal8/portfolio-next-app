@@ -33,7 +33,7 @@ export function Header() {
         </nav>
         <Link
           href="https://drive.google.com/file/d/1tEsNOJ_j9Sbs11cZ_KlxVKQLWYfGhoVe/view?usp=drive_link"
-          className="w-fit max-lg:hidden flex items-center gap-4 font-medium py-4 px-6 text-white border-gray-600 border rounded-full"
+          className="w-fit hover:bg-cyan-600/50 transition-all duration-500 max-lg:hidden flex items-center gap-4 font-medium py-4 px-6 text-white border-cyan-600 border-2 rounded-full"
           target="_blank"
         >
           <span>Get Resume</span> <Download />
