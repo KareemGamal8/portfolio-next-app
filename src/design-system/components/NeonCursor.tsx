@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-export default function NeonCursor() {
+export function NeonCursor() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
 
@@ -42,7 +42,7 @@ export default function NeonCursor() {
 
   return (
     <div
-      className="fixed pointer-events-none z-50 transition-transform duration-100 ease-out"
+      className="fixed pointer-events-none z-[60] transition-transform duration-100 ease-out"
       style={{
         left: `${position.x}px`,
         top: `${position.y}px`,

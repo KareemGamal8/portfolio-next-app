@@ -1,11 +1,13 @@
 "use client";
 
+import { headerAtom } from "@/design-system/atoms";
 import { ModernDrawer } from "@/design-system/components";
+import { URLS } from "@/shared/urls";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Download, Menu2 } from "tabler-icons-react";
 import { twMerge } from "tailwind-merge";
-import { navLinks } from "../data";
+import { navLinks } from "../../data";
 import NavbarDrawer from "./NavbarDrawer";
 
 export function Header() {
@@ -14,9 +16,12 @@ export function Header() {
   return (
     <header className="py-4 bg-background z-40 sticky top-0 animate-flip-down animate-duration-[1000ms] animate-delay-200 animate-ease-linear">
       <div className="flex container justify-between items-center gap-8 ">
-        <h3 className="text-white uppercase font-extrabold text-3xl">
+        <Link
+          href={URLS.home}
+          className="text-white uppercase font-extrabold text-3xl"
+        >
           Kareem.g
-        </h3>
+        </Link>
         <nav className="flex ma justify-between max-lg:hidden items-center gap-16">
           {navLinks.map((link, index) => (
             <Link
@@ -39,13 +44,14 @@ export function Header() {
           <span>Get Resume</span> <Download />
         </Link>
         <ModernDrawer
+          atom={headerAtom}
           containerClassName="min-lg:hidden"
           toggleButton={
             <button>
               <Menu2 color="#fff" size={40} />
             </button>
           }
-          className="!bg-background !shadow-2xl w-[60%] max-md:w-[80%]"
+          className="!bg-background !shadow-2xl w-[50%] max-sm:w-[80%]"
         >
           <NavbarDrawer />
         </ModernDrawer>

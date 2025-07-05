@@ -3,7 +3,7 @@ import { SocialLinkIcon } from "@/modules/home/components";
 import { URLS } from "@/shared/urls";
 import Link from "next/link";
 import { Mail, PhoneCall } from "tabler-icons-react";
-import { footerSocialLinksData } from "../data";
+import { footerSocialLinksData } from "../../data";
 import { Copyrights } from "./Copyrights";
 
 export function Footer() {
@@ -47,10 +47,10 @@ export function Footer() {
               </h3>
               <div className="flex flex-col gap-2">
                 <Link
-                  href={URLS.portfolio}
+                  href={URLS.projects}
                   className="font-medium nav-link relative after:!w-16 after:!h-8 after:!left-4"
                 >
-                  Portfolio
+                  Projects
                 </Link>
                 <Link
                   href={URLS.contactUs}

@@ -1,10 +1,10 @@
 "use client";
 
+import { OpenAtomActions, ReactAtom } from "@mongez/react-atom";
 import React, { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { X } from "tabler-icons-react";
 import { twMerge } from "tailwind-merge";
-import { useDrawer } from "../hooks";
 
 type DrawerProps = {
   toggleButton: React.ReactNode;
@@ -13,6 +13,7 @@ type DrawerProps = {
   children: React.ReactNode;
   containerClassName?: string;
   width?: string | number;
+  atom: ReactAtom<boolean, OpenAtomActions>;
 };
 
 const getDirectionStyles = (
@@ -74,9 +75,8 @@ export function ModernDrawer({
   children,
   containerClassName,
   width,
+  atom,
 }: DrawerProps) {
-  const { closeDrawer, isOpen, toggleDrawer } = useDrawer();
-
   const [portalContainer, setPortalContainer] = useState<HTMLElement | null>(
     null
   );
@@ -93,8 +93,10 @@ export function ModernDrawer({
     };
   }, []);
 
+  const opened = atom.useOpened();
+
   useEffect(() => {
-    if (isOpen) {
+    if (opened) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
@@ -102,11 +104,11 @@ export function ModernDrawer({
     return () => {
       document.body.style.overflow = "";
     };
-  }, [isOpen]);
+  }, [opened]);
 
   return (
     <div className={twMerge(containerClassName)}>
-      <span onClick={toggleDrawer} className="cursor-pointer">
+      <span onClick={atom.toggle} className="cursor-pointer">
         {toggleButton}
       </span>
 
@@ -117,12 +119,12 @@ export function ModernDrawer({
             {/* Overlay */}
             <div
               className={`fixed inset-0 bg-black z-40 transition-opacity duration-300 ease-in-out ${
-                isOpen
+                opened
                   ? "opacity-20 pointer-events-auto"
                   : "opacity-0 pointer-events-none"
               }`}
-              onClick={closeDrawer}
-              aria-label="Close drawer overlay"
+              onClick={atom.close}
+              aria-label="Close atom overlay"
             />
 
             {/* Drawer */}
@@ -135,20 +137,20 @@ export function ModernDrawer({
               )}
               style={{
                 ...getDirectionStyles(direction, width),
-                ...(isOpen ? getActiveStyle(direction) : {}),
-                pointerEvents: isOpen ? "auto" : "none",
+                ...(opened ? getActiveStyle(direction) : {}),
+                pointerEvents: opened ? "auto" : "none",
               }}
               role="dialog"
               aria-modal="true"
             >
               <button
-                onClick={closeDrawer}
-                aria-label="Close drawer"
+                onClick={atom.close}
+                aria-label="Close atom"
                 className="border ms-auto block border-gray-700 p-2 rounded-full"
               >
                 <X color="#fff" />
               </button>
-              <div>{children}</div>
+              {children}
             </div>
           </>,
           portalContainer

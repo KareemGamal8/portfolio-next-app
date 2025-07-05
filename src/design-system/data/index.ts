@@ -12,11 +12,11 @@ export const navLinks = [
     url: URLS.home,
   },
   {
-    text: "Portfolio",
-    url: URLS.portfolio,
+    text: "Projects",
+    url: URLS.projects,
   },
   {
-    text: "Contact",
+    text: "Contact Me",
     url: URLS.contactUs,
   },
 ];

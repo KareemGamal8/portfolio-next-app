@@ -1,5 +1,5 @@
 export const URLS = {
   home: "/",
-  portfolio: "/portfolio",
-  contactUs: "/contact-us",
+  projects: "/projects",
+  contactUs: "/contact-me",
 };

@@ -1,17 +1,15 @@
-import { useDrawer } from "@/design-system/hooks";
+import { headerAtom } from "@/design-system/atoms";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { twMerge } from "tailwind-merge";
-import { navLinks } from "../data";
 import { Download } from "tabler-icons-react";
+import { twMerge } from "tailwind-merge";
+import { navLinks } from "../../data";
 
 export default function NavbarDrawer() {
   const pathname = usePathname();
 
-  const { toggleDrawer } = useDrawer();
-
   return (
-    <section className="flex flex-col gap-6">
+    <section className="flex flex-col h-full gap-6">
       {navLinks.map((link, index) => (
         <Link
           className={twMerge(
@@ -20,15 +18,14 @@ export default function NavbarDrawer() {
           )}
           key={index}
           href={link.url}
-          onClick={toggleDrawer}
+          onClick={headerAtom.close}
         >
           {link.text}
         </Link>
       ))}
-
       <Link
         href="https://drive.google.com/file/d/1tEsNOJ_j9Sbs11cZ_KlxVKQLWYfGhoVe/view?usp=drive_link"
-        className="w-fit flex items-center gap-4 font-medium py-4 px-8 text-white border-gray-600 border rounded-full"
+        className="w-full mt-18 text-center text-xl flex justify-center items-center gap-4 font-medium py-4 px-8 text-white border-gray-600 border rounded-full"
         target="_blank"
       >
         <span>Get Resume</span> <Download />
