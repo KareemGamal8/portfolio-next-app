@@ -4,7 +4,7 @@ import { Project } from "../types";
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
-    <div className="bg-secondary rounded-xl min-h-96 relative flex flex-col gap-4 group overflow-hidden">
+    <div className="bg-secondary rounded-xl lg:min-h-96 relative flex flex-col gap-4 group overflow-hidden">
       <Link href={project.url} target="_blank">
         <Image
           src={project.image}
@@ -17,7 +17,7 @@ export function ProjectCard({ project }: { project: Project }) {
       </Link>
 
       {/* Info Panel */}
-      <div className="absolute flex flex-col justify-center gap-2 h-[30%] text-white bottom-0 px-4 z-10 bg-secondary/80 w-full transform transition-all duration-500 ease-in-out translate-y-full group-hover:translate-y-0">
+      <div className="lg:absolute max-lg:py-2 flex flex-col justify-center gap-2 h-[30%] text-white lg:bottom-0 px-4 z-10 bg-secondary/80 w-full lg:transform transition-all duration-500 ease-in-out lg:translate-y-full group-hover:translate-y-0">
         <Link
           href={project.url}
           target="_blank"

@@ -3,7 +3,7 @@ import { Skills } from "../components/Skills";
 
 export function HomePageContent() {
   return (
-    <div className="flex flex-col gap-36">
+    <div className="flex flex-col">
       <Hero />
       <AboutMe />
       {/* <Features /> */}
