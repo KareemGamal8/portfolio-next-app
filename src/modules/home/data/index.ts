@@ -12,9 +12,13 @@ import {
   TypescriptIcon,
 } from "@/design-system/components";
 import {
+  Ballpen,
+  BrandFacebook,
+  BrandGmail,
+  BrandLinkedin,
+  BrandWhatsapp,
   Briefcase,
   ChartArrowsVertical,
-  Clipboard,
   Devices,
   Settings,
   ShoppingCart,
@@ -70,7 +74,7 @@ export const servicesData = [
       "Progress tracking system",
       "Quiz and certificate features",
     ],
-    Icon: Clipboard,
+    Icon: Ballpen,
   },
   {
     title: "Personal Portfolios",
@@ -136,5 +140,32 @@ export const skillsData = [
   {
     title: "Redux Toolkit",
     Icon: ReduxIcon,
+  },
+];
+
+export const socialLinksData = [
+  {
+    Icon: BrandFacebook,
+    href: "https://www.facebook.com/kareem.gamal.3344913",
+    className:
+      "hover:bg-indigo-800 absolute z-20 top-[-5%] start-[50%] translate-x-[-50%]",
+  },
+  {
+    Icon: BrandGmail,
+    href: "mailto:kareemgmal7755@gmail.com",
+    className:
+      "hover:bg-red-700 absolute z-20 bottom-[-5%] start-[50%] translate-x-[-50%]",
+  },
+  {
+    Icon: BrandWhatsapp,
+    href: "https://wa.me/201151148634",
+    className:
+      "hover:bg-emerald-600 absolute z-20 top-[50%] start-[-7.5%] translate-y-[-50%]",
+  },
+  {
+    Icon: BrandLinkedin,
+    href: "https://www.linkedin.com/in/kareem-gamal-1889a8230/",
+    className:
+      "hover:bg-blue-600 absolute z-20 top-[50%] end-[-7.5%] translate-y-[-50%]",
   },
 ];

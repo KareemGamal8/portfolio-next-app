@@ -49,16 +49,13 @@ export default function NeonCursor() {
         transform: "translate(-50%, -50%)",
       }}
     >
-      {/* Outer glow */}
       <div
         className={`
-        absolute top-[50%] w-28 blur-2xl h-28 left-[50%] translate-x-[-50%] translate-y-[-50%] rounded-full transition-all duration-300
+        absolute top-[50%] w-22 blur-2xl h-22 left-[50%] translate-x-[-50%] translate-y-[-50%] rounded-full transition-all duration-300
         ${isHovering ? "bg-cyan-500/40" : "bg-blue-500/40"}
  
       `}
       ></div>
-
-    
     </div>
   );
 }

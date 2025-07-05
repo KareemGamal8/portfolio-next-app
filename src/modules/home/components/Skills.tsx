@@ -13,7 +13,7 @@ export function Skills() {
       <div className="flex flex-col gap-12 pb-12">
         <SectionTitle title="Tools in My Toolbox" />
         <Swiper
-          navigation={true}
+          // navigation={true}
           speed={5000}
           effect="fade"
           direction="horizontal"
@@ -21,9 +21,6 @@ export function Skills() {
           modules={[Autoplay]}
           autoplay={{
             delay: 0,
-            pauseOnMouseEnter: true,
-            reverseDirection: true,
-
           }}
           freeMode
           breakpoints={{

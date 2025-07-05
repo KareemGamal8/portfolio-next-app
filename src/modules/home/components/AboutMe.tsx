@@ -28,7 +28,7 @@ export function AboutMe() {
             function flawlessly across different devices, platforms, and
             browsers. I have a strong passion for user-centric design and always
             strive to deliver seamless and engaging user experiences."
-            speed={120}
+            speed={100}
             maxIterations={20}
             characters="ABCD1234!?"
             className="revealed"
@@ -42,7 +42,7 @@ export function AboutMe() {
               performance, enhance accessibility, and implement best coding
               practices. I thrive in fast-paced environments where collaboration
               and innovation are valued."
-            speed={140}
+            speed={100}
             maxIterations={20}
             characters="ABCD1234!?"
             className="revealed"
@@ -55,7 +55,7 @@ export function AboutMe() {
             that allows me to leverage my technical proficiency, creativity, and
             passion for front-end development to contribute to meaningful
             projects and deliver exceptional digital experiences."
-            speed={160}
+            speed={100}
             maxIterations={30}
             characters="ABCD1234!?"
             className="revealed"

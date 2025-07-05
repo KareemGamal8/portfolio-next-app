@@ -1,4 +1,4 @@
-import { AboutMe, Features, Hero, Services } from "../components";
+import { AboutMe, Hero, Services } from "../components";
 import { Skills } from "../components/Skills";
 
 export function HomePageContent() {
@@ -6,7 +6,7 @@ export function HomePageContent() {
     <div className="flex flex-col gap-36">
       <Hero />
       <AboutMe />
-      <Features />
+      {/* <Features /> */}
       <Services />
       <Skills />
     </div>

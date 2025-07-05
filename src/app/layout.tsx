@@ -1,5 +1,5 @@
 import NeonCursor from "@/design-system/components/NeonCursor";
-import { Header } from "@/design-system/layouts/components";
+import { Footer, Header } from "@/design-system/layouts/components";
 import "./globals.css";
 
 export default function RootLayout({
@@ -12,7 +12,8 @@ export default function RootLayout({
       <body>
         <NeonCursor />
         <Header />
-        <main>{children}</main>
+        <main className="mb-16">{children}</main>
+        <Footer />
       </body>
     </html>
   );

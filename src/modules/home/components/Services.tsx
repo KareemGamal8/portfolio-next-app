@@ -14,7 +14,7 @@ export function Services() {
       <div className="flex flex-col gap-12 py-12">
         <SectionTitle title="How I Can Help" />
         <Swiper
-          navigation={true}
+          // navigation={true}
           pagination={{
             dynamicBullets: true,
           }}
@@ -25,6 +25,7 @@ export function Services() {
           autoplay={{
             delay: 2000,
             pauseOnMouseEnter: true,
+            reverseDirection: true,
           }}
           breakpoints={{
             320: {

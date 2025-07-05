@@ -4,7 +4,7 @@ import { twMerge } from "tailwind-merge";
 
 interface SocialLinkIconType {
   href: string;
-  className: string;
+  className?: string;
   Icon: IconType;
 }
 
