@@ -26,11 +26,10 @@ export function TextareaInput({
   ref,
   ...props
 }: TextInputProps) {
-  const { value, changeValue, id, type, otherProps, name, error } =
-    useFormControl({
-      rules: props.rules || [requiredRule, patternRule, integerRule],
-      ...props,
-    });
+  const { value, changeValue, type, otherProps, name, error } = useFormControl({
+    rules: props.rules || [requiredRule, patternRule, integerRule],
+    ...props,
+  });
 
   console.log(props, otherProps);
 
@@ -38,19 +37,9 @@ export function TextareaInput({
     <div
       className={twMerge("flex w-full flex-1 flex-col gap-1", containerStyles)}
     >
-      {/* {otherProps.label && (
-        <>
-          <InputLabel
-            id={id}
-            label={otherProps.label}
-            required={props.required}
-          />
-        </>
-      )} */}
       <div className="relative">
         <textarea
           {...otherProps}
-          // id={id}
           type={type}
           ref={ref}
           name={name}
@@ -72,7 +61,6 @@ export function TextareaInput({
           </div>
         )}
       </div>
-
       <InputError error={error} />
     </div>
   );

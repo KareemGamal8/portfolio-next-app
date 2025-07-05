@@ -10,7 +10,6 @@ import {
 import { JSX } from "react";
 import { twMerge } from "tailwind-merge";
 import InputError from "./InputError";
-import InputLabel from "./InputLabel";
 
 type TextInputProps = {
   containerStyles?: string;
@@ -29,26 +28,16 @@ export function TextInput({
   ref,
   ...props
 }: TextInputProps) {
-  const { value, changeValue, id, type, otherProps, error, disabled } =
+  const { value, changeValue, type, otherProps, error, disabled } =
     useFormControl({
       rules: props.rules || [requiredRule, patternRule, integerRule],
       ...props,
     });
-    
 
   return (
     <div
       className={twMerge("flex w-full flex-1 flex-col gap-1", containerStyles)}
     >
-      {/* {otherProps.label && (
-        <>
-          <InputLabel
-            id={id}
-            label={otherProps.label}
-            required={props.required}
-          />
-        </>
-      )} */}
       <div className="relative">
         <input
           {...otherProps}
@@ -67,8 +56,7 @@ export function TextInput({
             "w-full text-white text-lg font-semibold placeholder:text-white rounded-md border-2 border-secondary border-solid px-6 py-4 tracking-wide outline-none",
             className,
             icon && "ltr:pl-12 rtl:pr-12",
-            error &&
-              "border-red-700/50 focus-within:border-2"
+            error && "border-red-700/50 focus-within:border-2"
           )}
         />
         {icon && (
