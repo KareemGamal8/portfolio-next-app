@@ -13,7 +13,7 @@ export function ContactMeForm() {
   const { handleContactMeForm } = useContact();
 
   return (
-    <div className="container my-12">
+    <div className="my-12">
       <Form
         id="contact-form"
         className="flex flex-col gap-4 text-white"

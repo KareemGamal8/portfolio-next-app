@@ -48,11 +48,10 @@ export function TextareaInput({
             changeValue(e.target.value.trimStart());
           }}
           className={twMerge(
-            "w-full text-white text-lg font-semibold placeholder:text-white rounded-md border-2 border-secondary border-solid px-6 py-4 tracking-wide outline-none",
-            icon && "ltr:pl-12 rtl:pr-12",
-            error && "border-red-700/50 focus-within:border-2",
+            "w-full bg-white/5 text-white text-lg font-bold placeholder:text-white/20 rounded-2xl border border-white/10 px-6 py-5 tracking-tight outline-none focus:border-cyan-500/50 focus:bg-white/10 transition-all duration-300 min-h-[150px] resize-none",
+            icon && "ltr:pl-14 rtl:pr-14",
+            error && "border-red-500/50 focus:border-red-500",
             otherProps.className
-            // make the border black on focus with transition
           )}
         />
         {icon && (

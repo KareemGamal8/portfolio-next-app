@@ -20,7 +20,7 @@ export function useContact() {
     })
       .then(() => {
         toast.success("The message has been sent successfully.");
-        form.reset()
+        form.reset();
       })
 
       .catch((error) => {

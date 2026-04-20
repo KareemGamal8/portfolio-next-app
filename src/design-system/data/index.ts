@@ -7,10 +7,10 @@ import {
 } from "tabler-icons-react";
 
 export const navLinks = [
-  {
-    text: "Home",
-    url: URLS.home,
-  },
+  // {
+  //   text: "Home",
+  //   url: URLS.home,
+  // },
   {
     text: "Projects",
     url: URLS.projects,

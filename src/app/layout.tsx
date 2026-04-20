@@ -1,4 +1,5 @@
 import { Footer, Header, NeonCursor } from "@/design-system/components";
+import AffixButton from "@/design-system/components/AffixButton";
 import { Toaster } from "react-hot-toast";
 import "./globals.css";
 
@@ -24,6 +25,7 @@ export default function RootLayout({
           }}
         />
         <NeonCursor />
+        <AffixButton />
         <Header />
         <main>{children}</main>
         <Footer />

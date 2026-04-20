@@ -1,12 +1,16 @@
+"use client";
+
 export function Copyrights() {
-  const date = new Date();
+  const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="text-white border-t-2 shadow-lg border-secondary max-lg:flex-col flex gap-2 justify-center items-center py-4 mt-8">
+    <div className="flex flex-col md:flex-row gap-2 justify-center items-center py-6 text-white/70 text-sm font-sans tracking-wide">
       <p>
-        Designed and Developed by <span className="font-bold">Kareem Gamal</span>
+        Designed & Built by <span className="text-white font-bold hover:text-cyan-400 transition-colors cursor-default">Kareem Gamal</span>
       </p>
-      <p>© All rights reserved {date.getFullYear()}</p>
-    </footer>
+      <span className="hidden md:block">•</span>
+      <p>© {currentYear} All rights reserved</p>
+    </div>
   );
 }
+
