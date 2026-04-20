@@ -9,6 +9,7 @@ import nannisCakes from "@shared/assets/projects/Nanni-s-Cakes-04-20-2026_02_45_
 import olfa from "@shared/assets/projects/Olfa-Welfare-04-20-2026_02_42_AM.jpg";
 import senaat from "@shared/assets/projects/Senaat-Industrial-Excellence-04-20-2026_02_44_AM.jpg";
 import zodcon from "@shared/assets/projects/Zodcon-04-20-2026_02_47_AM.jpg";
+import doctoor from "@shared/assets/projects/Doctoor-04-20-2026_02_51_AM.jpg";
 
 import { Project } from "../types";
 
@@ -106,7 +107,7 @@ export const projects: Project[] = [
     title: "Doctoor Platform",
     description:
       "Developed a comprehensive digital platform (Doctoor) that enables doctors to create professional medical websites and manage patient bookings online. The platform provides tools for improving digital presence, organizing work schedules, and facilitating communication with patients through QR codes for prescriptions and shared links.",
-    image: market, // Placeholder, I should ask the user for the image
+    image: doctoor, // Placeholder, I should ask the user for the image
     url: "https://doctoor-next-app.vercel.app/en",
   },
 ];
