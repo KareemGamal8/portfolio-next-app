@@ -7,6 +7,7 @@ type BlurTextProps = {
   text?: string;
   delay?: number;
   className?: string;
+  containerClassName?: string;
   animateBy?: "words" | "letters";
   direction?: "top" | "bottom";
   threshold?: number;
@@ -38,6 +39,7 @@ export const BlurText = ({
   text = "",
   delay = 200,
   className = "",
+  containerClassName = "",
   animateBy = "words",
   direction = "top",
   threshold = 0.1,
@@ -97,7 +99,7 @@ export const BlurText = ({
   );
 
   return (
-    <p ref={ref} className="flex flex-wrap">
+    <p ref={ref} className={`flex flex-wrap ${containerClassName}`}>
       {elements.map((segment, index) => {
         const animateKeyframes = buildKeyframes(fromSnapshot, toSnapshots);
 
@@ -131,3 +133,4 @@ export const BlurText = ({
     </p>
   );
 };
+

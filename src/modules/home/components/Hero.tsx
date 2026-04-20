@@ -7,6 +7,7 @@ import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import SocialLinkIcons from "./SocialLinkIcons";
+import Link from "next/link";
 
 export function Hero() {
   const router = useRouter();
@@ -37,13 +38,13 @@ export function Hero() {
       <div className="absolute top-0 -left-4 w-72 h-72 bg-cyan-500/10 rounded-full blur-[120px] -z-10 animate-pulse" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-600/10 rounded-full blur-[150px] -z-10" />
 
-      <div className="container relative z-10">
-        <div className="grid my-16 gap-16 lg:grid-cols-12 items-center font-alex font-bold">
+      <div className="container relative">
+        <div className="grid my-16 gap-16 lg:grid-cols-12 max-xl:text-center items-center font-alex font-bold">
           <motion.div
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="flex lg:col-span-7 text-white flex-col max-lg:items-center"
+            className="flex lg:col-span-7 text-white flex-col max-xl:items-center"
           >
             <motion.div variants={itemVariants as Variants}>
               <BlurText
@@ -51,7 +52,8 @@ export function Hero() {
                 animateBy="words"
                 delay={100}
                 direction="top"
-                className="max-lg:text-center text-xl font-semibold text-cyan-400"
+                className="max-xl:text-center text-xl font-semibold text-cyan-400"
+                containerClassName="max-xl:justify-center"
               />
             </motion.div>
 
@@ -61,7 +63,8 @@ export function Hero() {
                 animateBy="words"
                 delay={200}
                 direction="top"
-                className="relative uppercase xl:text-[5.5rem] bg-gradient-to-r from-white via-cyan-400 to-blue-500 bg-clip-text text-transparent w-fit overflow-hidden max-sm:text-[2.6rem] max-lg:text-7xl max-xl:text-6xl drop-shadow-sm py-2"
+                className="relative uppercase max-xl:text-center xl:text-[5.5rem] bg-gradient-to-r from-white via-cyan-400 to-blue-500 bg-clip-text text-transparent w-fit overflow-hidden max-sm:text-[2.6rem] max-xl:text-7xl drop-shadow-sm py-2"
+                containerClassName="max-xl:justify-center"
               />
             </motion.div>
 
@@ -71,26 +74,27 @@ export function Hero() {
                 animateBy="words"
                 delay={300}
                 direction="top"
-                className="font-sans text-white/80 text-2xl tracking-wide mt-2"
+                className="font-sans text-white/80 text-2xl tracking-wide mt-2 max-xl:text-center"
+                containerClassName="max-xl:justify-center"
               />
             </motion.div>
 
             <motion.div
               variants={itemVariants as Variants}
-              className="mt-10 flex gap-4 max-lg:justify-center"
+              className="mt-10 flex gap-4 max-xl:justify-center"
             >
-              <button
-                onClick={() => router.push(URLS.projects)}
-                className="px-8 py-3 bg-cyan-600 hover:bg-cyan-500 text-white rounded-full font-sans font-semibold transition-all hover:scale-105 active:scale-95 shadow-lg shadow-cyan-900/20"
+              <Link
+                href={URLS.projects}
+                className="lg:px-8 px-4 py-3 bg-cyan-600 hover:bg-cyan-500 text-white rounded-full font-sans font-semibold transition-all hover:scale-105 active:scale-95 shadow-lg shadow-cyan-900/20"
               >
                 View My Work
-              </button>
-              <button
-                onClick={() => router.push(URLS.contactUs)}
-                className="px-8 py-3 border border-white/10 hover:bg-white/5 text-white rounded-full font-sans font-semibold transition-all hover:scale-105 active:scale-95"
+              </Link>
+              <Link
+                href={URLS.contactUs}
+                className="lg:px-8 px-4 py-3 border border-white/10 hover:bg-white/5 text-white rounded-full font-sans font-semibold transition-all hover:scale-105 active:scale-95"
               >
                 Contact Me
-              </button>
+              </Link>
             </motion.div>
           </motion.div>
 
@@ -102,8 +106,8 @@ export function Hero() {
           >
             <div className="relative group">
               {/* Animated rings around the image */}
-              <div className="absolute inset-0 border-2 border-cyan-500/20 rounded-full scale-110 animate-[ping_3s_linear_infinite]" />
-              <div className="absolute inset-0 border border-blue-500/20 rounded-full scale-125 animate-[ping_4s_linear_infinite_reverse]" />
+              <div className="absolute -z-10 inset-0 border-2 border-cyan-500/20 rounded-full scale-110 animate-[ping_3s_linear_infinite]" />
+              <div className="absolute -z-10 inset-0 border border-blue-500/20 rounded-full scale-125 animate-[ping_4s_linear_infinite_reverse]" />
               <motion.div
                 animate={{ y: [0, -15, 0] }}
                 transition={{

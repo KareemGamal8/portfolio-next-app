@@ -23,21 +23,23 @@ export function ProjectItem({
       transition={{ duration: 0.8, ease: "easeOut" }}
       className={`flex flex-col ${
         isEven ? "xl:flex-row" : "xl:flex-row-reverse"
-      } gap-12 xl:gap-20 items-center py-20 border-b border-white/5 last:border-0`}
+      } gap-10 xl:gap-20 items-center py-12 lg:py-24 border-b border-white/5 last:border-0`}
     >
       {/* Image Container */}
       <div className="w-full xl:w-3/5 group relative">
         <Link
           href={project.url}
           target="_blank"
-          className="block relative overflow-hidden rounded-[2.5rem] bg-zinc-900 border border-white/10 shadow-2xl"
+          className="block relative overflow-hidden rounded-3xl lg:rounded-[2.5rem] bg-zinc-900 border border-white/10 shadow-2xl"
         >
-          <div className="aspect-[16/9] relative overflow-hidden">
+          <div className="aspect-[4/3] sm:aspect-[16/9] relative overflow-hidden">
             <Image
               src={project.image}
               alt={project.title}
               fill
-              className="object-cover transition-transform duration-1000 group-hover:scale-105"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 50vw"
+              priority={index < 2}
+              className="object-cover object-top transition-transform duration-1000 group-hover:scale-105"
             />
             {/* Overlay Gradient */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -62,13 +64,13 @@ export function ProjectItem({
       {/* Content Container */}
       <div className="w-full xl:w-2/5 space-y-8">
         <div className="space-y-4">
-          <motion.h3 className="text-4xl lg:text-6xl font-black text-white leading-tight tracking-tight uppercase">
+          <motion.h3 className="text-3xl lg:text-6xl font-black text-white leading-tight tracking-tight uppercase">
             {project.title}
           </motion.h3>
           <div className="h-1.5 w-24 bg-cyan-500 rounded-full" />
         </div>
 
-        <p className="text-xl text-white/60 leading-relaxed font-medium">
+        <p className="text-xl max-lg:text-base text-white/60 leading-relaxed font-medium">
           {project.description}
         </p>
 
