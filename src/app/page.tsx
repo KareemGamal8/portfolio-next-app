@@ -2,7 +2,7 @@ import { HomePageContent } from "@/modules/home/pages";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Home",
+  title: "Kareem Gamal",
 };
 
 export default function Home() {

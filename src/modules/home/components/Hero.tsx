@@ -1,12 +1,16 @@
 "use client";
 
 import { BlurText } from "@/design-system/components";
+import { URLS } from "@/shared/urls";
 import user from "@shared/assets/kareem.png";
 import { motion, Variants } from "framer-motion";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import SocialLinkIcons from "./SocialLinkIcons";
 
 export function Hero() {
+  const router = useRouter();
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -75,10 +79,16 @@ export function Hero() {
               variants={itemVariants as Variants}
               className="mt-10 flex gap-4 max-lg:justify-center"
             >
-              <button className="px-8 py-3 bg-cyan-600 hover:bg-cyan-500 text-white rounded-full font-sans font-semibold transition-all hover:scale-105 active:scale-95 shadow-lg shadow-cyan-900/20">
+              <button
+                onClick={() => router.push(URLS.projects)}
+                className="px-8 py-3 bg-cyan-600 hover:bg-cyan-500 text-white rounded-full font-sans font-semibold transition-all hover:scale-105 active:scale-95 shadow-lg shadow-cyan-900/20"
+              >
                 View My Work
               </button>
-              <button className="px-8 py-3 border border-white/10 hover:bg-white/5 text-white rounded-full font-sans font-semibold transition-all hover:scale-105 active:scale-95">
+              <button
+                onClick={() => router.push(URLS.contactUs)}
+                className="px-8 py-3 border border-white/10 hover:bg-white/5 text-white rounded-full font-sans font-semibold transition-all hover:scale-105 active:scale-95"
+              >
                 Contact Me
               </button>
             </motion.div>
@@ -94,7 +104,6 @@ export function Hero() {
               {/* Animated rings around the image */}
               <div className="absolute inset-0 border-2 border-cyan-500/20 rounded-full scale-110 animate-[ping_3s_linear_infinite]" />
               <div className="absolute inset-0 border border-blue-500/20 rounded-full scale-125 animate-[ping_4s_linear_infinite_reverse]" />
-
               <motion.div
                 animate={{ y: [0, -15, 0] }}
                 transition={{
