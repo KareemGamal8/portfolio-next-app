@@ -31,8 +31,6 @@ export function TextareaInput({
     ...props,
   });
 
-  console.log(props, otherProps);
-
   return (
     <div
       className={twMerge("flex w-full flex-1 flex-col gap-1", containerStyles)}
@@ -51,7 +49,7 @@ export function TextareaInput({
             "w-full bg-white/5 text-white text-lg font-bold placeholder:text-white/20 rounded-2xl border border-white/10 px-6 py-5 tracking-tight outline-none focus:border-cyan-500/50 focus:bg-white/10 transition-all duration-300 min-h-[150px] resize-none",
             icon && "ltr:pl-14 rtl:pr-14",
             error && "border-red-500/50 focus:border-red-500",
-            otherProps.className
+            otherProps.className,
           )}
         />
         {icon && (
