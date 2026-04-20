@@ -1,6 +1,5 @@
 "use client";
 
-import AffixButton from "@/design-system/components/AffixButton";
 import { SocialLinkIcon } from "@/modules/home/components";
 import { URLS } from "@/shared/urls";
 import { motion } from "framer-motion";
@@ -96,7 +95,6 @@ export function Footer() {
                   kareemgmal7755@gmail.com
                 </span>
               </Link>
-
               <Link
                 href="tel:+201151148634"
                 className="group flex flex-col p-6 bg-white/5 border border-white/10 rounded-3xl hover:border-blue-500/50 hover:bg-white/[0.08] transition-all"

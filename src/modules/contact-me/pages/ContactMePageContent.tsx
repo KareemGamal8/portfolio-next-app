@@ -73,11 +73,11 @@ export function ContactMePageContent() {
           >
             <div className="space-y-6">
               <h2 className="text-4xl 2xl:text-6xl font-black text-white uppercase leading-none">
-                Let's Build Something{" "}
+                Let&apos;s Build Something{" "}
                 <span className="text-cyan-500 italic">Grand</span> Together
               </h2>
               <p className="text-xl text-white/50 max-w-md leading-relaxed">
-                Have a project in mind or just want to say hi? I'm always open
+                Have a project in mind or just want to say hi? I&apos;m always open
                 to discussing new projects, creative ideas or opportunities to
                 be part of your visions.
               </p>
@@ -123,7 +123,6 @@ export function ContactMePageContent() {
               </div>
             </div>
           </motion.div>
-
           {/* Right Side: Form */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}

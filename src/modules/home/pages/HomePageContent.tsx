@@ -1,4 +1,4 @@
-import { AboutMe, Features, Hero, Services } from "../components";
+import { AboutMe, Hero, Services } from "../components";
 import { Skills } from "../components/Skills";
 
 export function HomePageContent() {

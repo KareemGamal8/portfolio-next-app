@@ -102,7 +102,6 @@ export default function NavbarDrawer() {
             </motion.div>
           );
         })}
-
         {/* Action Button */}
         <motion.div variants={itemVariants} className="mt-12">
           <Link
@@ -126,7 +125,7 @@ export default function NavbarDrawer() {
         className="mt-auto border-t border-white/5 py-8"
       >
         <p className="text-white/30 text-xs uppercase tracking-widest font-bold mb-4">
-          Let's Connect
+          Let&apos;s Connect
         </p>
         <p className="text-white font-medium text-sm mb-1">
           kareemgmal7755@gmail.com
