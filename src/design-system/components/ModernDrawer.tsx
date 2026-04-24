@@ -118,7 +118,7 @@ export function ModernDrawer({
           <>
             {/* Overlay */}
             <div
-              className={`fixed inset-0 bg-black z-40 transition-opacity duration-300 ease-in-out ${
+              className={`fixed inset-0 bg-black z-[110] transition-opacity duration-300 ease-in-out ${
                 opened
                   ? "opacity-20 pointer-events-auto"
                   : "opacity-0 pointer-events-none"
@@ -130,7 +130,7 @@ export function ModernDrawer({
             {/* Drawer */}
             <div
               className={twMerge(
-                `fixed p-4 z-50 bg-white shadow-lg transition-transform duration-300 ease-in-out w-full md:w-[${
+                `fixed p-4 z-[120] bg-white shadow-lg transition-transform duration-300 ease-in-out w-full md:w-[${
                   width ?? "300px"
                 }]`,
                 className
