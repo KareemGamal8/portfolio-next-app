@@ -116,6 +116,7 @@ export function ModernDrawer({
       {portalContainer &&
         createPortal(
           <>
+          
             {/* Overlay */}
             <div
               className={`fixed inset-0 bg-black z-[110] transition-opacity duration-300 ease-in-out ${
