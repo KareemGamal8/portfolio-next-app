@@ -26,7 +26,7 @@ export function Breadcrumb({ items, title }: BreadcrumbProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-5xl lg:text-7xl font-black text-white uppercase tracking-tighter">
+            <h1 className="text-4xl lg:text-7xl font-black text-white uppercase tracking-tighter">
               {title.split(" ").map((word, i) => (
                 <span key={i} className={i === title.split(" ").length - 1 ? "text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500" : ""}>
                   {word + " "}

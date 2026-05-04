@@ -61,8 +61,8 @@ export function ContactMePageContent() {
         items={[{ title: "Home", url: URLS.home }, { title: "Contact Me" }]}
       />
 
-      <div className="container px-4 py-24">
-        <div className="grid xl:grid-cols-2 gap-16 lg:gap-12 items-start">
+      <div className="container py-12 sm:py-24 overflow-hidden sm:overflow-visible">
+        <div className="grid xl:grid-cols-2 gap-12 lg:gap-12 items-start">
           {/* Left Side: Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -72,11 +72,11 @@ export function ContactMePageContent() {
             className="space-y-12"
           >
             <div className="space-y-6">
-              <h2 className="text-4xl 2xl:text-6xl font-black text-white uppercase leading-none">
+              <h2 className="text-2xl max-sm sm:text-5xl 2xl:text-6xl font-black text-white uppercase leading-[1.1] sm:leading-none">
                 Let&apos;s Build Something{" "}
                 <span className="text-cyan-500 italic">Grand</span> Together
               </h2>
-              <p className="text-xl text-white/50 max-w-md leading-relaxed">
+              <p className="text-base sm:text-lg 2xl:text-xl text-white/60 max-w-md leading-relaxed">
                 Have a project in mind or just want to say hi? I&apos;m always open
                 to discussing new projects, creative ideas or opportunities to
                 be part of your visions.
@@ -88,16 +88,16 @@ export function ContactMePageContent() {
                 <Link
                   key={index}
                   href={info.href}
-                  className="flex items-center gap-6 group"
+                  className="flex items-center gap-5 sm:gap-6 group"
                 >
-                  <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-cyan-500 group-hover:bg-cyan-500 group-hover:text-black transition-all duration-500">
+                  <div className="w-14 h-14 shrink-0 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-cyan-500 group-hover:bg-cyan-500 group-hover:text-black transition-all duration-500">
                     {info.icon}
                   </div>
-                  <div>
-                    <h3 className="text-sm font-bold text-white/40 uppercase tracking-widest mb-1">
+                  <div className="min-w-0 flex-1">
+                    <h3 className="text-xs sm:text-sm font-bold text-white/40 uppercase tracking-widest mb-1">
                       {info.title}
                     </h3>
-                    <p className="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">
+                    <p className="text-base sm:text-lg font-bold text-white group-hover:text-cyan-400 transition-colors break-words">
                       {info.value}
                     </p>
                   </div>
@@ -132,9 +132,9 @@ export function ContactMePageContent() {
             className="relative"
           >
             <div className="absolute -inset-4 bg-gradient-to-tr from-cyan-500/10 to-blue-500/10 blur-3xl -z-10 rounded-[3rem]" />
-            <div className="bg-zinc-900/50 backdrop-blur-xl border border-white/5 p-8 2xl:p-12 rounded-[2.5rem] shadow-2xl">
-              <div className="mb-10">
-                <h3 className="text-2xl font-black text-white uppercase tracking-tight mb-2">
+            <div className="bg-zinc-900/50 backdrop-blur-xl border border-white/5 p-6 sm:p-10 2xl:p-12 rounded-[2.5rem] shadow-2xl">
+              <div className="mb-8">
+                <h3 className="text-xl sm:text-3xl font-black text-white uppercase tracking-tight mb-2">
                   Send me a message
                 </h3>
                 <div className="h-1 w-12 bg-cyan-500 rounded-full" />

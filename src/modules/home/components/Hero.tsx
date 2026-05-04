@@ -125,9 +125,9 @@ export function Hero() {
                   className="w-[20rem] xl:w-[24rem] rounded-full grayscale hover:grayscale-0 transition-all duration-700"
                 />
               </motion.div>
-              <div className="absolute -bottom-0 max-md:bottom-2 left-1/2 -translate-x-1/2 scale-110">
+              {/* <div className="absolute -bottom-0 max-md:bottom-2 left-1/2 -translate-x-1/2 scale-110">
                 <SocialLinkIcons />
-              </div>
+              </div> */}
             </div>
           </motion.div>
         </div>

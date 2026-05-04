@@ -53,7 +53,7 @@ export function TextInput({
             changeValue(e.target.value.trimStart());
           }}
           className={twMerge(
-            "w-full bg-white/5 text-white text-lg font-bold placeholder:text-white/20 rounded-2xl border border-white/10 px-6 py-5 tracking-tight outline-none focus:border-cyan-500/50 focus:bg-white/10 transition-all duration-300",
+            "w-full bg-white/5 text-white text-lg font-bold placeholder:text-white/20 rounded-2xl border border-white/10 px-6 py-3 tracking-tight outline-none focus:border-cyan-500/50 focus:bg-white/10 transition-all duration-300",
             className,
             icon && "ltr:pl-14 rtl:pr-14",
             error && "border-red-500/50 focus:border-red-500"

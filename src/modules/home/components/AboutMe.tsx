@@ -89,7 +89,7 @@ export function AboutMe() {
                 y: -10,
                 backgroundColor: "rgba(255, 255, 255, 0.08)",
               }}
-              className="p-8 bg-white/5 border border-white/10 rounded-3xl flex flex-col items-center text-center gap-4 transition-all"
+              className="p-8 max-md:col-span-2 bg-white/5 border border-white/10 rounded-3xl flex flex-col items-center text-center gap-4 transition-all"
             >
               <div className="p-4 bg-zinc-900 rounded-2xl shadow-inner">
                 {stat.icon}

@@ -13,7 +13,7 @@ export function ContactMeForm() {
   const { handleContactMeForm } = useContact();
 
   return (
-    <div className="my-12">
+    <div>
       <Form
         id="contact-form"
         className="flex flex-col gap-4 text-white"
@@ -31,7 +31,7 @@ export function ContactMeForm() {
           placeholder="Enter your message"
           required
         />
-        <SubmitButton>Send Message</SubmitButton>
+        <SubmitButton className="text-white py-4 max-lg:text-base">Send Message</SubmitButton>
       </Form>
     </div>
   );

@@ -29,11 +29,7 @@ export default function NavbarDrawer() {
   };
 
   return (
-    <section className="flex flex-col h-full p-8 relative overflow-hidden">
-      {/* Decorative Glows */}
-      {/* <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-600/10 rounded-full blur-[100px] -z-10" />
-      <div className="absolute bottom-0 left-0 w-48 h-48 bg-blue-600/5 rounded-full blur-[80px] -z-10" /> */}
-
+    <section className="flex flex-col h-full p-4 relative overflow-hidden">
       {/* Drawer Header */}
       <div className="flex items-center justify-between mb-12">
         <Link
@@ -43,12 +39,6 @@ export default function NavbarDrawer() {
         >
           Kareem<span className="text-cyan-500">.</span>g
         </Link>
-        {/* <button 
-          onClick={headerAtom.close}
-          className="p-2 bg-white/5 rounded-xl text-white/50 hover:text-white transition-colors"
-        >
-          <X size={24} />
-        </button> */}
       </div>
 
       {/* Nav Links */}
@@ -75,7 +65,7 @@ export default function NavbarDrawer() {
                 <div className="flex items-center gap-4">
                   <span
                     className={twMerge(
-                      "text-2xl font-bold tracking-tight transition-colors",
+                      "text-lg font-bold tracking-tight transition-colors",
                       isActive &&
                         "bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent",
                     )}
