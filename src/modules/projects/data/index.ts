@@ -1,27 +1,25 @@
 import cpPrint from "@shared/assets/projects/CP-20-2026_02_49_AM.jpg";
 import zamil from "@shared/assets/projects/Discover-Zamil-AC-Innovative-Cooling-Solutions-Now-Zamil-AC-04-20-2026_02_40_AM.jpg";
+import doctoor from "@shared/assets/projects/Doctoor-04-20-2026_02_51_AM.jpg";
 import hirondelle from "@shared/assets/projects/Hirondelle-Properties-04-20-2026_02_40_AM.jpg";
-import portfolio from "@shared/assets/projects/Hisham-04-202026_02_46_AM.jpg";
 import asap from "@shared/assets/projects/Home-ASAP-04-20-2026_02_41_AM.jpg";
 import kazlak from "@shared/assets/projects/Kazlak-04-20-2026_02_43_AM.jpg";
-import market from "@shared/assets/projects/Market-04-20-2026_02_38_AM.jpg";
 import nannisCakes from "@shared/assets/projects/Nanni-s-Cakes-04-20-2026_02_45_AM.jpg";
 import olfa from "@shared/assets/projects/Olfa-Welfare-04-20-2026_02_42_AM.jpg";
 import senaat from "@shared/assets/projects/Senaat-Industrial-Excellence-04-20-2026_02_44_AM.jpg";
 import zodcon from "@shared/assets/projects/Zodcon-04-20-2026_02_47_AM.jpg";
-import doctoor from "@shared/assets/projects/Doctoor-04-20-2026_02_51_AM.jpg";
 
 import { Project } from "../types";
 
 export const projects: Project[] = [
-  {
-    id: "1",
-    title: "Market",
-    description:
-      "Developed a full-featured e-commerce platform featuring product categorization, promotional campaigns, trending items, and brand showcases. Implemented a user-friendly interface with optimized navigation, enhancing the overall shopping experience and customer engagement.",
-    image: market,
-    url: "https://market.mentoor.io/en",
-  },
+  // {
+  //   id: "1",
+  //   title: "Market",
+  //   description:
+  //     "Developed a full-featured e-commerce platform featuring product categorization, promotional campaigns, trending items, and brand showcases. Implemented a user-friendly interface with optimized navigation, enhancing the overall shopping experience and customer engagement.",
+  //   image: market,
+  //   url: "https://market.mentoor.io/en",
+  // },
   {
     id: "2",
     title: "Zamil",
@@ -78,14 +76,14 @@ export const projects: Project[] = [
     image: nannisCakes,
     url: "https://nanniscakes.com/",
   },
-  {
-    id: "9",
-    title: "Hisham Ashraf - Portfolio",
-    description:
-      "Developed and deployed a modern, responsive personal portfolio website to showcase graphic design projects and creative services. The platform is built with a focus on performance, clean UI/UX, and seamless user experience across all devices. The website includes structured sections such as About, Services, Portfolio Gallery, and Client Testimonials.",
-    image: portfolio,
-    url: "https://hisham-ashraf.vercel.app/",
-  },
+  // {
+  //   id: "9",
+  //   title: "Hisham Ashraf - Portfolio",
+  //   description:
+  //     "Developed and deployed a modern, responsive personal portfolio website to showcase graphic design projects and creative services. The platform is built with a focus on performance, clean UI/UX, and seamless user experience across all devices. The website includes structured sections such as About, Services, Portfolio Gallery, and Client Testimonials.",
+  //   image: portfolio,
+  //   url: "https://hisham-ashraf.vercel.app/",
+  // },
   {
     id: "10",
     title: "Zodcon",
