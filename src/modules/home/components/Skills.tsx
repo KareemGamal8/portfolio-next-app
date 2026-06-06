@@ -1,11 +1,11 @@
 "use client";
 
 import "@/app/globals.css";
+import { motion } from "framer-motion";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { type Icon as IconType } from "tabler-icons-react";
-import { motion } from "framer-motion";
 import { skillsData } from "../data";
 import { SectionTitle } from "./SectionTitle";
 
@@ -29,7 +29,7 @@ export function Skills() {
           <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
 
           <Swiper
-            speed={4000}
+            speed={2000}
             spaceBetween={30}
             modules={[Autoplay]}
             autoplay={{
@@ -37,7 +37,7 @@ export function Skills() {
               disableOnInteraction: false,
             }}
             loop
-            allowTouchMove={false}
+            // allowTouchMove={false}
             breakpoints={{
               320: { slidesPerView: 2 },
               480: { slidesPerView: 3 },

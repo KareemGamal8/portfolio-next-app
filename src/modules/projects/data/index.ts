@@ -1,7 +1,6 @@
 import cpPrint from "@shared/assets/projects/CP-20-2026_02_49_AM.jpg";
 import zamil from "@shared/assets/projects/Discover-Zamil-AC-Innovative-Cooling-Solutions-Now-Zamil-AC-04-20-2026_02_40_AM.jpg";
 import doctoor from "@shared/assets/projects/Doctoor-04-20-2026_02_51_AM.jpg";
-import hirondelle from "@shared/assets/projects/Hirondelle-Properties-04-20-2026_02_40_AM.jpg";
 import asap from "@shared/assets/projects/Home-ASAP-04-20-2026_02_41_AM.jpg";
 import kazlak from "@shared/assets/projects/Kazlak-04-20-2026_02_43_AM.jpg";
 import nannisCakes from "@shared/assets/projects/Nanni-s-Cakes-04-20-2026_02_45_AM.jpg";
@@ -28,14 +27,14 @@ export const projects: Project[] = [
     image: zamil,
     url: "https://zamilac.com/",
   },
-  {
-    id: "3",
-    title: "Hirondelle",
-    description:
-      "Built a responsive real estate platform featuring dynamic property listings, advanced search functionality, and categorized browsing for rentals and sales. Focused on enhancing user experience through clear data presentation and seamless navigation.",
-    image: hirondelle,
-    url: "https://hirondelle-properties.com/en",
-  },
+  // {
+  //   id: "3",
+  //   title: "Hirondelle",
+  //   description:
+  //     "Built a responsive real estate platform featuring dynamic property listings, advanced search functionality, and categorized browsing for rentals and sales. Focused on enhancing user experience through clear data presentation and seamless navigation.",
+  //   image: hirondelle,
+  //   url: "https://hirondelle-properties.com/en",
+  // },
   {
     id: "4",
     title: "ASAP EG",
@@ -106,6 +105,6 @@ export const projects: Project[] = [
     description:
       "Developed a comprehensive digital platform (Doctoor) that enables doctors to create professional medical websites and manage patient bookings online. The platform provides tools for improving digital presence, organizing work schedules, and facilitating communication with patients through QR codes for prescriptions and shared links.",
     image: doctoor, // Placeholder, I should ask the user for the image
-    url: "https://doctoor-next-app.vercel.app/en",
+    url: "https://www.doctoor.site/",
   },
 ];

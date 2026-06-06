@@ -1,9 +1,12 @@
 import {
   CSSIcon,
+  ExpressIcon,
   HTMLIcon,
   JavaScriptIcon,
   MantineIcon,
+  MongoDBIcon,
   NextIcon,
+  NodeJsIcon,
   ReactFormIcon,
   ReactIcon,
   ReduxIcon,
@@ -140,6 +143,18 @@ export const skillsData = [
   {
     title: "Redux Toolkit",
     Icon: ReduxIcon,
+  },
+  {
+    title: "Node JS",
+    Icon: NodeJsIcon,
+  },
+  {
+    title: "MongoDB",
+    Icon: MongoDBIcon,
+  },
+  {
+    title: "Express",
+    Icon: ExpressIcon,
   },
 ];
 
