@@ -67,7 +67,7 @@ export default function NavbarDrawer() {
                     className={twMerge(
                       "text-lg font-bold tracking-tight transition-colors",
                       isActive &&
-                        "bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent",
+                      "bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent",
                     )}
                   >
                     {link.text}
@@ -95,7 +95,7 @@ export default function NavbarDrawer() {
         {/* Action Button */}
         <motion.div variants={itemVariants} className="mt-12">
           <Link
-            href="https://drive.google.com/file/d/1a37b9OAbVEdRplUrWkwlPVvsu1WFIaoO/view?usp=sharing"
+            href="https://drive.google.com/file/d/1cd_Cz_HNkiAybf8SUaqhxVK_r-4f_59o/view?usp=sharing"
             className="group relative w-fit z-100 bg-white/5 hover:bg-cyan-600 transition-all duration-500 flex items-center gap-3 font-bold py-3 px-6 text-white border-white/10 hover:border-cyan-600 border rounded-full shadow-lg"
             target="_blank"
           >
