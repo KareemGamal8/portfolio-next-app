@@ -1,28 +1,29 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
 import { useEffect, useState } from "react";
 import { ArrowUp } from "tabler-icons-react";
 
 export default function AffixButton() {
   const [isVisible, setIsVisible] = useState(false);
-  const [scrollProgress, setScrollProgress] = useState(0);
+  const { scrollY, scrollYProgress } = useScroll();
+
+  // Smooth out the progress indicator line using a spring
+  const pathLength = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
 
   useEffect(() => {
-    const handleScroll = () => {
-      // Show button after 300px
-      const scrolled = window.scrollY;
-      setIsVisible(scrolled > 300);
+    // Set initial visibility on mount
+    setIsVisible(scrollY.get() > 300);
 
-      // Calculate scroll percentage
-      const height = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = (scrolled / height) * 100;
-      setScrollProgress(progress);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    // Listen for scroll changes to toggle visibility
+    return scrollY.on("change", (latest) => {
+      setIsVisible(latest > 300);
+    });
+  }, [scrollY]);
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -30,11 +31,6 @@ export default function AffixButton() {
       behavior: "smooth",
     });
   };
-
-  // SVG circle calculations
-  const radius = 20;
-  const circumference = 2 * Math.PI * radius;
-  const offset = circumference - (scrollProgress / 100) * circumference;
 
   return (
     <AnimatePresence>
@@ -56,7 +52,7 @@ export default function AffixButton() {
               <circle
                 cx="25"
                 cy="25"
-                r={radius}
+                r="20"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"
@@ -65,13 +61,11 @@ export default function AffixButton() {
               <motion.circle
                 cx="25"
                 cy="25"
-                r={radius}
+                r="20"
                 fill="none"
                 stroke="#06b6d4"
                 strokeWidth="2"
-                strokeDasharray={circumference}
-                style={{ strokeDashoffset: offset }}
-                className="transition-all duration-200"
+                style={{ pathLength }}
               />
             </svg>
 

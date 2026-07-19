@@ -38,7 +38,7 @@ export function Hero() {
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-600/10 rounded-full blur-[150px] -z-10" />
 
       <div className="container relative">
-        <div className="grid my-16 gap-16 lg:grid-cols-12 text-center  font-alex font-bold">
+        <div className="grid my-16 gap-16 lg:grid-cols-12 text-center items-center  font-alex font-bold">
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -106,29 +106,21 @@ export function Hero() {
             <div className="relative group w-full max-w-[500px] scale-110 sm:scale-125 lg:scale-[1.35] flex justify-center mt-10 lg:mt-0">
               {/* Glowing gradient background behind the image */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70%] h-[70%] bg-gradient-to-tr from-cyan-500 to-blue-600 rounded-full blur-[80px] opacity-30 group-hover:opacity-60 transition-opacity duration-700 animate-[pulse_4s_cubic-bezier(0.4,0,0.6,1)_infinite]" />
-              
+
               {/* Decorative rings behind */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] border border-cyan-500/30 rounded-full group-hover:scale-110 transition-transform duration-700" />
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] h-[100%] border border-blue-500/20 rounded-full group-hover:scale-[1.02] transition-transform duration-700 delay-100" />
 
-              <motion.div
-                animate={{ y: [0, -15, 0] }}
-                transition={{
-                  duration: 6,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-                className="relative z-10 w-full"
-              >
-                <div className="relative [mask-image:linear-gradient(to_bottom,black_80%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_80%,transparent_100%)]">
-                  <Image
-                    priority
-                    src={user}
-                    alt="Kareem"
-                    className="w-full h-auto object-contain grayscale-[20%] hover:grayscale-0 transition-all duration-500 drop-shadow-[0_10px_20px_rgba(6,182,212,0.3)] group-hover:drop-shadow-[0_15px_30px_rgba(6,182,212,0.5)]"
-                  />
-                </div>
-              </motion.div>
+
+              <div className="relative [mask-image:linear-gradient(to_bottom,black_80%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_80%,transparent_100%)]">
+                <Image
+                  priority
+                  src={user}
+                  alt="Kareem"
+                  className="w-full h-auto object-contain grayscale-[20%] hover:grayscale-0 transition-all duration-500 drop-shadow-[0_10px_20px_rgba(6,182,212,0.3)] group-hover:drop-shadow-[0_15px_30px_rgba(6,182,212,0.5)]"
+                />
+              </div>
+
             </div>
           </motion.div>
         </div>
